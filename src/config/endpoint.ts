@@ -1,8 +1,8 @@
 import { ForumApiEndpoint } from "@/types/interface/forumApiEndpoint";
 import config from "@/config";
 
-const forumApiEndpoint = (): ForumApiEndpoint => {
-  const root: String = config.forumApiEndpoint;
+const forumApiEndpoint = ((): ForumApiEndpoint => {
+  const root: string = config.forumApiEndpoint;
 
   return {
     root: root,
@@ -25,6 +25,6 @@ const forumApiEndpoint = (): ForumApiEndpoint => {
       `${root}/threads/${threadId}/comments/${commentId}/neutral-vote`,
     leaderboards: `${root}/leaderboards`,
   };
-};
+})();
 
 export { forumApiEndpoint };

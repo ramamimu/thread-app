@@ -9,87 +9,87 @@ import {
 } from "./shared";
 
 type RegisterBody = {
-  name: String;
-  email: String;
-  password: String;
+  name: string;
+  email: string;
+  password: string;
 };
 
 type RegisterResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     user: {
-      id: String;
-      name: String;
-      email: String;
-      avatar: String;
+      id: string;
+      name: string;
+      email: string;
+      avatar: string;
     };
   };
 };
 
 type LoginBody = {
-  email: String;
-  password: String;
+  email: string;
+  password: string;
 };
 
 type LoginResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
-    token: String;
+    token: string;
   };
 };
 
 type UsersResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     users: User[];
   };
 };
 
 type OwnProfileResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     user: User;
   };
 };
 
 type CreateThreadBody = {
-  title: String;
-  body: String;
-  category: String;
+  title: string;
+  body: string;
+  category: string;
 };
 
 type CreateThreadResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     thread: Thread;
   };
 };
 
 type ThreadsResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     threads: Thread[];
   };
 };
 
 type DetailThreadResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     detailThread: {
-      id: String;
-      title: String;
-      body: String;
-      category: String;
-      createdAt: String;
-      upVotesBy: String[];
-      downVotesBy: String[];
+      id: string;
+      title: string;
+      body: string;
+      category: string;
+      createdAt: string;
+      upVotesBy: string[];
+      downVotesBy: string[];
       owner: Owner[];
       comments: Comment[];
     };
@@ -97,32 +97,32 @@ type DetailThreadResponse = {
 };
 
 type CreateCommentResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     comment: Comment;
   };
 };
 
 type VoteThreadResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     vote: ThreadVote;
   };
 };
 
 type VoteCommentResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     vote: CommentVote;
   };
 };
 
 type LeaderboardResponse = {
-  status: String;
-  message: String;
+  status: string;
+  message: string;
   data: {
     leaderboards: Leaderboard[];
   };

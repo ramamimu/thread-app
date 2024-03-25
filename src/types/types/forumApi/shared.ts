@@ -1,55 +1,59 @@
 type User = {
-  id: String;
-  name: String;
-  email: String;
-  avatar: String;
+  id: string;
+  name: string;
+  email: string;
+  avatar: string;
 };
 
 type Thread = {
-  id: String;
-  title: String;
-  body: String;
-  category: String;
-  createdAt: String;
-  ownerId: String;
-  upVotesBy: String[];
-  downVotesBy: String[];
+  id: string;
+  title: string;
+  body: string;
+  category: string;
+  createdAt: string;
+  ownerId: string;
+  upVotesBy: string[];
+  downVotesBy: string[];
   totalComments: Number;
 };
 
 type Owner = {
-  id: String;
-  name: String;
-  avatar: String;
+  id: string;
+  name: string;
+  avatar: string;
 };
 
 type Comment = {
-  id: String;
-  content: String;
-  createdAt: String;
+  id: string;
+  content: string;
+  createdAt: string;
   owner: Owner;
-  upVotesBy: String[];
-  downVotesBy: String[];
+  upVotesBy: string[];
+  downVotesBy: string[];
 };
 
+type VoteType = 0 | 1 | -1;
+
 type ThreadVote = {
-  id: String;
-  userId: String;
-  threadId: String;
-  voteType: 0 | 1 | -1;
+  id: string;
+  userId: string;
+  threadId: string;
+  voteType: VoteType;
 };
 
 type CommentVote = {
-  id: String;
-  userId: String;
-  commentId: String;
-  voteType: 0 | 1 | -1;
+  id: string;
+  userId: string;
+  commentId: string;
+  voteType: VoteType;
 };
 
 type Leaderboard = {
   user: User;
   score: Number;
 };
+
+type VoteEndpoint = "up-vote" | "down-vote" | "neutral-vote";
 
 export type {
   User,
@@ -59,4 +63,6 @@ export type {
   ThreadVote,
   CommentVote,
   Leaderboard,
+  VoteType,
+  VoteEndpoint,
 };
