@@ -17,6 +17,18 @@ type Thread = {
   totalComments: Number;
 };
 
+type DetailThread = {
+  id: string;
+  title: string;
+  body: string;
+  category: string;
+  createdAt: string;
+  upVotesBy: string[];
+  downVotesBy: string[];
+  owner: Owner[];
+  comments: Comment[];
+};
+
 type Owner = {
   id: string;
   name: string;
@@ -58,6 +70,7 @@ type VoteEndpoint = "up-vote" | "down-vote" | "neutral-vote";
 export type {
   User,
   Thread,
+  DetailThread,
   Owner,
   Comment,
   ThreadVote,

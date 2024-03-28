@@ -6,6 +6,7 @@ import {
   ThreadVote,
   CommentVote,
   Leaderboard,
+  DetailThread,
 } from "./shared";
 
 type RegisterBody = {
@@ -82,17 +83,7 @@ type DetailThreadResponse = {
   status: string;
   message: string;
   data: {
-    detailThread: {
-      id: string;
-      title: string;
-      body: string;
-      category: string;
-      createdAt: string;
-      upVotesBy: string[];
-      downVotesBy: string[];
-      owner: Owner[];
-      comments: Comment[];
-    };
+    detailThread: DetailThread;
   };
 };
 
